@@ -55,5 +55,13 @@
 </template>
 
 <script>
-
+export default {
+  name: 'HeaderComponent',
+  methods: {
+    menuToggle: function () {
+      // TODO Dom핸들링이 아닌 직접 적으로 컴포넌트 외에걸 컨트롤 할려면???
+      document.querySelector('body').classList.toggle('menu-is-open');
+    }
+  }
+};
 </script>

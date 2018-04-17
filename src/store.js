@@ -1,7 +1,7 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from 'vue';
+import Vuex from 'vuex';
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
@@ -9,22 +9,22 @@ const store = new Vuex.Store({
   },
   getters: {
     getCounter (state) {
-      return state.counter
+      return state.counter;
     }
   },
   mutations: {
     addCounter (state, payload) {
-      return state.counter++
+      return state.counter++;
     },
     subCounter (state, payload) {
-      return (state.counter -= payload)
+      return (state.counter -= payload);
     }
   },
   actions: {
     asyncIncrement (context, payload) {
-      return setTimeout(() => context.commit('addCounter'), payload.duration)
+      return setTimeout(() => context.commit('addCounter'), payload.duration);
     }
   }
-})
+});
 
-export default store
+export default store;
